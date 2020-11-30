@@ -19,10 +19,10 @@ ws.onmessage = function(message) {
             // send parameters(video filename)
             break;
         case 'fileList':
-            var files = json_data.data;
-            for(let file of files) {
-                $('.video-list').append("<div class=\"video-item\"><video src=\"videos/" + String(file) + "\" controls width=250></video><p>" + String(file) + "<p></div>")
-            }
+            // var files = json_data.data;
+            // for(let file of files) {
+            //     $('.video-list').append("<div class=\"video-item\"><video src=\"videos/" + String(file) + "\" controls width=250></video><p>" + String(file) + "<p></div>")
+            // }
             break;
         case 'detectList':
             var items = json_data.data;
