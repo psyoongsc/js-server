@@ -1,0 +1,26 @@
+var ws = new WebSocket("ws://localhost:3001/");
+ws.onopen = function(event) {
+    const sendData = {
+        event: 'response',
+        data: null
+    }
+    sendData.event = 'connection';
+    ws.send(JSON.stringify(sendData));
+}
+ws.onmessage = function(message) {
+
+    var rcv_data = message.data;
+    var json_data = JSON.parse(rcv_data);
+    console.log(json_data.event);
+    console.log(json_data.data);
+
+    switch(json_data.event) {
+        case 'detect':
+            window.open("../popup.html?fileName='" + json_data.data + "'", "popup", "_blank");
+            //window.location.reload();
+            // send parameters(video filename, thumbnail picture filename)
+
+            break;
+        default:
+    }
+}

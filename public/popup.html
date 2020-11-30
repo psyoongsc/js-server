@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/popup.css">
+    <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script type="text/javascript">
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+            return params;
+        }
+
+        window.onload = function() {
+            oPrams = getUrlParams();
+
+            //alert(oPrams.fileName);
+        }
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+<script>
+    oPrams = getUrlParams();
+    $('div').append("<a class=\"live-stream-btn\" href=\"https://192.168.226.41:8443\">Live</a><p>") 
+    $('div').append("<image src=\"images/" + String(oPrams.stillName) + "\" width=500></video><p>") 
+    $('div').append("<video src=\"videos/" + String(oPrams.fileName) + "\" controls width=250></video><p>") 
+    $('div').append(oPrams.fileName) 
+</script>
+</html>

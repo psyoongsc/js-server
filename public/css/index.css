@@ -1,0 +1,35 @@
+header {
+    background-color: #FFFAAE;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 10px;
+    margin: 30px 100px 30px 100px;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.live-stream {
+    margin-top: -67px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+}
+
+.live-stream-btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 3px 50px;
+    background-color: red;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.video-list {
+    text-align: center;
+}
+
+.video-item {
+    float: left;
+    width: 300px;
+}
